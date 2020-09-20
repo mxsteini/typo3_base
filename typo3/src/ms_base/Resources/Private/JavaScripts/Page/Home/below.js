@@ -1,4 +1,4 @@
-import '../../../Scss/Home/below.scss'
+import '../../../Scss/Home/above.scss'
 import all from '../_All/below'
 // Install modules
 // import Swiper from 'swiper'
