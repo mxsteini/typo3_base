@@ -1,0 +1,359 @@
+.hide-field-label .powermail_fieldwrap {
+    label {
+        display: none;
+    }
+}
+
+.hide-legend-label {
+    legend,
+    label {
+        display: none;
+    }
+}
+
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.checkbox label, .radio label {
+    display: block !important;
+    min-height: 22px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: $font-normal !important;
+}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    position: absolute;
+    margin-left: -20px
+}
+
+.checkbox + .checkbox {
+    margin-top: -5px
+}
+
+.zwischenfrage.open ~ form {
+    display: none;
+}
+
+.zwischenfrage  {
+    .submitcancel-submit {
+        justify-content: space-around !important;
+    }
+}
+.powermail_fieldwrap_amount {
+    > div {
+        position: relative;
+        span.currency {
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 0;
+            line-height: 40px;
+        }
+    }
+}
+span.toggle-password {
+    width: 38px;
+    height: 38px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    padding:8px;
+    //#5e5d5d
+    svg {
+        display: block;
+        fill: #5e5d5d;
+    }
+}
+.meldung {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    align-items: center;
+    margin-bottom: 10px;
+    .content {
+        border: 1px solid $red;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .btn {
+        justify-items: center;
+        flex-grow: 0;
+    }
+    &.open ~ form {
+        display: none;
+    }
+    &.open ~ div {
+        display: none;
+    }
+}
+.powermail_fieldwrap_type_password {
+    position: relative;
+    input[type=password] ~ span {
+        svg.open {
+            display: block;
+        }
+        svg.closed {
+            display: none;
+        }
+    }
+    input[type=text] ~ span {
+        svg.open {
+            display: none;
+        }
+        svg.closed {
+            display: block;
+        }
+    }
+}
+
+.checkbox-inline, .radio-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: 400;
+    cursor: pointer
+}
+
+.checkbox-inline + .checkbox-inline, .radio-inline + .radio-inline {
+    margin-top: 0;
+    margin-left: 10px
+}
+
+fieldset[disabled] input[type=checkbox], fieldset[disabled] input[type=radio], input[type=checkbox].disabled, input[type=checkbox][disabled], input[type=radio].disabled, input[type=radio][disabled] {
+    cursor: not-allowed
+}
+
+.checkbox-inline.disabled, .radio-inline.disabled, fieldset[disabled] .checkbox-inline, fieldset[disabled] .radio-inline {
+    cursor: not-allowed
+}
+
+.checkbox.disabled label, .radio.disabled label, fieldset[disabled] .checkbox label, fieldset[disabled] .radio label {
+    cursor: not-allowed
+}
+
+.checkbox, .checkbox-inline, .radio, .radio-inline {
+    position: relative
+}
+
+.checkbox input[type=checkbox], .checkbox input[type=radio], .checkbox-inline input[type=checkbox], .checkbox-inline input[type=radio], .radio input[type=checkbox], .radio input[type=radio], .radio-inline input[type=checkbox], .radio-inline input[type=radio] {
+    margin-left: 0;
+    opacity: 0
+}
+
+.checkbox label, .checkbox-inline label, .radio label, .radio-inline label {
+    position: relative;
+    padding-left: 30px;
+    color: $grey6;
+}
+
+.checkbox label:before,
+.checkbox-inline label:before, .radio label:before, .radio-inline label:before {
+    display: block;
+    content: "";
+    font-family: generali-icon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    z-index: 3;
+    color: $grey6;
+}
+
+.checkbox label:after, .checkbox-inline label:after,
+.radio label:after, .radio-inline label:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: #fff;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+}
+
+.checkbox label a, .checkbox-inline label a, .radio label a, .radio-inline label a {
+    text-decoration: underline
+}
+
+.radio input[type=radio] + label:before, .radio-inline input[type=radio] + label:before {
+    content: "\25ce"
+}
+
+.radio input[type=radio] + label:after, .radio-inline input[type=radio] + label:after {
+    border-radius: 11px
+}
+
+.radio input[type=radio]:checked + label:before, .radio-inline input[type=radio]:checked + label:before {
+    content: "\25cd"
+}
+
+.checkbox input[type=checkbox]:checked + label:before, .checkbox-inline input[type=checkbox]:checked + label:before {
+    content: "\2611"
+}
+
+
+.frame-type-list.frame-list-powermail_pi1 {
+    .tx-powermail {
+        padding: 20px;
+        margin: 0;
+        background: $grey1;
+    }
+
+    .powermail_fieldwrap {
+        input[type=password],
+        input[type=text] {
+            width: 100%;
+
+            &.parsley-error {
+                border-color: $red;
+            }
+        }
+
+        position: relative;
+
+        margin-bottom: 15px;
+    }
+
+    .radio-wrapper {
+        display: flex;
+
+        .radio {
+            margin-right: 20px;
+        }
+    }
+
+    .powermail_fieldset {
+        &.submitpage {
+            justify-content: flex-end;
+        }
+
+        &.submitcancel-submit {
+            justify-content: flex-end;
+            margin-left: 0;
+            margin-top: 30px;
+        }
+
+        &.submitcancel-cancel {
+            justify-content: flex-start;
+            margin-left: 0;
+            position: relative;
+            margin-top: -72px;
+        }
+
+        > legend {
+            color: $red;
+        }
+
+        &.only-first-label {
+            .powermail_fieldwrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            .powermail_fieldwrap + .powermail_fieldwrap label {
+                display: none;
+            }
+
+            input::placeholder {
+                color: grey3;
+            }
+        }
+
+        .powermail_fieldwrap_type_radio {
+            > div > div > label {
+
+            }
+        }
+    }
+
+    .parsley-errors-list {
+        display: none;
+    }
+
+    .parsley-errors-list.filled {
+        display: block;
+        position: absolute;
+        left: -3px;
+        top: 103%;
+        z-index: 4;
+        font-size: 12px;
+        background: white;
+        border: 1px solid $red;
+        border-radius: $border-radius;
+        margin: 0;
+        padding: 5px;
+        animation: parslye-arise .3s ease-in-out;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: -6px;
+            left: 16px;
+            content: '';
+            display: block;
+            border-style: solid;
+            border-color: transparent transparent white transparent;
+            border-width: 0 8px 6px;
+        }
+
+        &:before {
+            top: -7px;
+            left: 15px;
+            border-width: 0 9px 7px;
+            border-color: transparent transparent $red transparent;
+        }
+
+        li {
+            margin: 0;
+            padding: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    form {
+
+        label {
+            color: black;
+            font-weight: $font-bold;
+        }
+    }
+}
+
+@keyframes parslye-arise {
+    0% {
+        opacity: 0;
+        top: 90%;
+    }
+    100% {
+        top: 103%;
+        opacity: 1;
+    }
+}

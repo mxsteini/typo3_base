@@ -1,0 +1,25 @@
+table {
+    border: 1px solid $border-grey;
+    border-bottom: none;
+    margin: 10px 0 0;
+    width: 100%;
+}
+
+td {
+    border-bottom: 1px solid $border-grey;
+    border-left: 1px solid $border-grey;
+    padding: 5px 5px 5px 10px;
+    vertical-align: top;
+}
+
+th {
+    background: $grey3;
+    border-right: 1px solid $border-grey;
+    border-bottom: 1px solid $border-grey;
+    padding: 5px 5px 5px 10px;
+    text-align: left;
+}
+
+tr:hover td {
+    background: $grey3;
+}

@@ -1,0 +1,20 @@
+#back-to-top {
+    box-shadow: 0 -5px 8px rgba(0,0,0,.6) !important;
+    background: white !important;
+    &:before {
+        font-family: generali-icon;
+        line-height: 1;
+        content: "\2b06";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: inherit;
+        height: inherit;
+        font-size: 30px;
+        text-align: center;
+        color: $red;
+    }
+    .slideout-open & {
+        display: none;
+    }
+}

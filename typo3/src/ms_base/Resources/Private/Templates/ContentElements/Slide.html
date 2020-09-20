@@ -1,0 +1,50 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<section class="slide swiper-slide">
+    <div class="image">
+        <f:if condition="{data_image}">
+            <picture>
+                <f:if condition="{IE} != 1">
+                    <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '768', height: '336c', cropVariant: 'xs')}.webp"
+                            media="(max-width:768px)"
+                            type="image/webp">
+                    <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '1000', height: '437c', cropVariant: 'md')}.webp"
+                            media="(max-width:1000px)"
+                            type="image/webp">
+                    <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '1200', height: '525c', cropVariant: 'lg')}.webp"
+                            media="(max-width:1200px)"
+                            type="image/webp">
+                    <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '2400', height: '1050c', cropVariant: 'xl')}.webp"
+                            media="(min-width:1201px)"
+                            type="image/webp">
+                </f:if>
+                <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '768', height: '336c', cropVariant: 'xs')}"
+                        media="(max-width:768px)"
+                        type="image/jpeg">
+                <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '1000', height: '437c', cropVariant: 'md')}"
+                        media="(max-width:1000px)"
+                        type="image/jpeg">
+                <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '1200', height: '525c', cropVariant: 'lg')}"
+                        media="(max-width:1200px)"
+                        type="image/jpeg">
+                <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '2400', height: '1050c', cropVariant: 'xl')}"
+                        media="(min-width:1201px)"
+                        type="image/jpeg">
+                <img alt="{alt}" class="lazy"
+                     src="{f:uri.image(image: '{data_image.0}', width: '440', cropVariant: 'xl')}"
+                     title="{title}"/>
+            </picture>
+        </f:if>
+    </div>
+    <div class="mask" style="opacity: {opacity}"></div>
+    <div class="content">
+        <f:if condition="{data.header}">
+            <h2>{data.header}</h2>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <div class="bodytext">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+        </f:if>
+    </div>
+</section>
+</html>

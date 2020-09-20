@@ -1,0 +1,45 @@
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 22px;
+    margin-bottom: 11px;
+}
+
+h2 {
+    font-weight: $font-light;
+    text-align: center;
+    margin: 40px 0 0 0;
+    word-wrap: break-word;
+    font-size: 32px;
+    &:after {
+        content: "";
+        border-bottom: 1px solid $red;
+        margin: 25px auto 40px auto;
+        width: 200px;
+        display: block;
+        height: 1px;
+    }
+}
+
+.h4, h4 {
+    font-weight: $font-medium;
+    font-size: 18px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+.footenote {
+    font-size: .8rem;
+}
+@include media-breakpoint-up(md) {
+    h2 {
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,236 @@
+[class*=" icon-"], [class^=icon-] {
+    list-style: none;
+    margin: 0;
+    position: relative;
+    text-decoration: none
+}
+
+[class*=" icon-"]:after,
+[class*=" icon-"]:before,
+[class^=icon-]:after,
+[class^=icon-]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: generali-icon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline
+}
+
+[class*=" icon-"]:before,
+[class^=icon-]:before {
+    display: inline-block;
+    text-decoration: none
+}
+
+[class*=" icon-"]:after,
+[class^=icon-]:after {
+    display: none;
+    text-decoration: none
+}
+
+[class*=" icon-"]:hover:after,
+[class*=" icon-"]:hover:before,
+[class^=icon-]:hover:after,
+[class^=icon-]:hover:before {
+    text-decoration: none !important
+}
+
+[class*=" icon-"].icon-after:before,
+[class^=icon-].icon-after:before {
+    display: none
+}
+
+[class*=" icon-"].icon-after:after,
+[class^=icon-].icon-after:after {
+    display: inline-block;
+    left: auto;
+    right: 0
+}
+
+.icon-menu:after, .icon-menu:before {
+    content: "\2630"
+}
+
+.icon-menu-hover:after, .icon-menu-hover:before {
+    content: "\2637"
+}
+
+.icon-menu {
+    display: inline-block;
+    color: $red !important;
+}
+
+.icon-menu:before {
+    position: relative;
+    font-size: 40px;
+}
+
+.icon-menu span {
+    display: none
+}
+
+.icon-menu:active,
+.icon-menu:focus {
+    outline: 0
+}
+
+.icon-print:after, .icon-print:before {
+    content: "\1f403"
+}
+
+.icon-link:after, .icon-link:before {
+    content: "\1f517"
+}
+
+.icon-download-pdf:after, .icon-download-pdf:before {
+    content: "\1f4c4"
+}
+
+.slideout-open .icon-menu:before {
+    content: "\2637"
+}
+
+.icon-more:after, .icon-more:before {
+    content: "\227b"
+}
+
+a.btn-outline-primary {
+    &:after {
+
+    }
+}
+
+
+.slideout-menu .search-form .btn-search {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 40px;
+    background-color: transparent;
+    border: none
+}
+
+.slideout-menu .search-form .btn-search:before {
+    font-family: generali-icon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\1f50e";
+    position: absolute;
+    font-size: 26px;
+    top: 6px;
+    right: 10px;
+    color: $red;
+}
+
+.slideout-menu .search-form .btn-search span {
+    display: none
+}
+
+.btn-search {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 20%;
+    background-color: transparent;
+    border: none;
+    padding: 2px !important;
+}
+
+.btn-search:before {
+    font-family: generali-icon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\1f50e";
+    font-size: 16px;
+    line-height: 25px;
+    color: $grey6;
+    top: -2px;
+}
+
+.btn-search span {
+    display: none
+}
+
+.caret {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 !important;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+        font-family: generali-icon;
+        font-style: normal;
+        font-weight: 400;
+        content: "\25b6";
+        font-size: 22px;
+        line-height: 50px;
+        text-align: center;
+        display: inline-block;
+        transform: rotate(90deg);
+        transition: transform .2s ease-in-out;
+    }
+    .DOM-slider-hidden + &:before {
+        transform: rotate(0);
+    }
+
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px;
+
+    &:after {
+        @include button-size($btn-padding-y, $btn-padding-x / 1.5, $btn-font-size, $btn-line-height, $btn-border-radius);
+        padding-top: 11px;
+
+        font-size: 10px;
+    }
+}
+
+.btn.icon-after {
+    padding-right: 25px;
+}
+
+
+@include media-breakpoint-up(lg) {
+    //.btn {
+    //    padding: 2px;
+    //}
+}
+
+//.btn {
+//    &:after,
+//    &:before {
+//        line-height: 1.5;
+//    }
+//}

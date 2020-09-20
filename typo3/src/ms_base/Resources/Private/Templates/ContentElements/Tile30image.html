@@ -1,0 +1,48 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<div class="tile tile30image col-12 col-md-4">
+    <div class="image">
+        <f:if condition="{data_image}">
+            <picture>
+                <f:if condition="{IE} != 1">
+                    <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '768', height: '845c', cropVariant: 'xs')}.webp"
+                            media="(max-width:768px)"
+                            type="image/webp">
+                    <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '300', height: '330c', cropVariant: 'md')}.webp"
+                            media="(max-width:1000px)"
+                            type="image/webp">
+                    <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '400', height: '440c', cropVariant: 'lg')}.webp"
+                            media="(min-width:1200px)"
+                            type="image/webp">
+                </f:if>
+                <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '768', height: '845c', cropVariant: 'xs')}"
+                        media="(max-width:768px)"
+                        type="image/jpeg">
+                <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '300', height: '330c', cropVariant: 'md')}"
+                        media="(max-width:1000px)"
+                        type="image/jpeg">
+                <source data-srcset="{f:uri.image(image: '{data_image.0}', width: '400', height: '440c', cropVariant: 'lg')}"
+                        media="(min-width:1200px)"
+                        type="image/jpeg">
+                <img alt="{alt}" class="lazy"
+                     data-src="{f:uri.image(image: '{data_image.0}', width: '440', cropVariant: 'lg')}"
+                     title="{title}"/>
+            </picture>
+        </f:if>
+    </div>
+    <div class="content">
+        <f:if condition="{data.header}">
+            <h3>{data.header}</h3>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <div class="bodytext d-none d-lg-block">
+                <f:format.raw>{data.bodytext}</f:format.raw>
+            </div>
+        </f:if>
+    </div>
+    <div class="button-wrapper">
+        <f:if condition="{data.tx_cyzbain_linktarget}">
+            <f:link.typolink class="btn btn-lg icon-more icon-after btn-outline-primary" parameter="{data.tx_cyzbain_linktarget}">{data.tx_cyzbain_linktext}</f:link.typolink>
+        </f:if>
+    </div>
+</div>
+</html>

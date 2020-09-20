@@ -1,0 +1,185 @@
+.slideout-menu {
+    background: $red;
+    color: $white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 80vw;
+    min-width: 140px;
+    max-width: 440px;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-right: 1px solid $border-grey;
+    .level1 > li > a {
+        text-transform: uppercase;
+    }
+
+    .search-row {
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 20px 0 20px;
+
+        form, input {
+            width: 100%;
+        }
+    }
+
+    .search-form {
+        position: relative;
+    }
+
+    #query {
+        padding: 5px 60px 5px 5px;
+        height: 40px;
+        border: 1px solid $red;
+    }
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $border-grey;
+        position: relative;
+
+    }
+
+    .active > a span {
+        font-weight: $font-bold;
+    }
+
+    .level2 {
+        background: $grey3;
+
+        .active > a span {
+            color: $red;
+        }
+    }
+
+    .level3 {
+        background: $grey1;
+    }
+
+    a.caret {
+        border-left: 1px solid $border-grey;
+        padding: 0 !important;
+        align-items: center;
+        width: 50px;
+        text-align: center;
+        justify-content: center;
+
+        &:before {
+            font-size: 10px;
+            font-weight: $font-bold;
+        }
+    }
+
+    > ul > li:first-child {
+        border-top: 1px solid $border-grey;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        line-height: 50px;
+        padding: 0 10px 0 20px;
+        color: $white;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    > ul {
+        li {
+            border-bottom: 1px solid $border-grey;
+        }
+
+        ul {
+            background: $white;
+
+            a {
+                color: $body-color;
+
+                &:hover {
+                    color: $body-color;
+                    text-decoration: none;
+                }
+            }
+
+            a.caret {
+                border-left: 1px solid $border-grey;
+
+                &:before {
+                    color: $body-color;
+                }
+            }
+        }
+    }
+
+    li li li a {
+        padding: 0 10px 0 50px;
+    }
+
+    li li li li a {
+        padding: 0 10px 0 80px;
+    }
+
+    ul > li > ul {
+        li:first-child {
+            border-top: 1px solid $border-grey;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+    }
+
+    ul > li.open > ul {
+        display: block;
+    }
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    min-height: 100vh;
+    background-color: #FFF;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+    position: relative;
+
+    .slideout-shield {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+    }
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+
+@include media-breakpoint-up(lg) {
+    .slideout-open, .slideout-open .slideout-panel, .slideout-open body {
+        overflow: auto;
+    }
+}

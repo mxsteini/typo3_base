@@ -1,0 +1,47 @@
+<!-- vim: set ft=fluid :-->
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<nav class="side-menu">
+    <f:if condition="{data.pid} == 13">
+        <f:then>
+            <ul class="level3">
+                <f:for as="item" each="{menuMeta}">
+                    <li class="{f:if(condition: '{item.active}', then: 'active')} {f:if(condition: '{item.current}', then: 'current')}">
+                        <a href="{item.link}" title="{item.title}"> <span>{item.title}</span></a>
+                    </li>
+                </f:for>
+            </ul>
+        </f:then>
+        <f:else>
+            <f:for as="level1" each="{menuMain}">
+                <f:if condition="{level1.active}">
+                    <h5>{level1.title}</h5>
+                    <f:if condition="{level1.children}">
+                        <ul class="level2 {f:if(condition: '{level1.active} == 0 ', then: ' DOM-slider-hidden')}">
+                            <f:for as="level2" each="{level1.children}">
+                                <f:if condition="!{level2.spacer}">
+                                    <li class="{f:if(condition: '{level2.active}', then: 'active')} {f:if(condition: '{level2.current}', then: 'current')}">
+                                        <a href="{level2.link}" title="{level2.title}"> <span>{level2.title}</span></a>
+                                        <f:if condition="{level2.children}">
+                                            <ul class="level3 {f:if(condition: '{level2.active} == 0 ', then: ' DOM-slider-hidden')}">
+                                                <f:for as="level3" each="{level2.children}">
+                                                    <li class="{f:if(condition: '{level3.active}', then: 'active')} {f:if(condition: '{level3.current}', then: 'current')}">
+                                                        <f:if condition="{level3.children}">
+                                                            <a class="caret level3" title="Öffne Menu"></a>
+                                                        </f:if>
+                                                        <a href="{level3.link}" title="{level3.title}"> <span>{level3.title}</span></a>
+                                                    </li>
+                                                </f:for>
+                                            </ul>
+                                            <a class="caret level2" title="Öffne Menu"></a>
+                                        </f:if>
+                                    </li>
+                                </f:if>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </f:if>
+            </f:for>
+        </f:else>
+    </f:if>
+</nav>
+</html>

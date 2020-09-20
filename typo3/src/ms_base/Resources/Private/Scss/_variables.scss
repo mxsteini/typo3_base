@@ -1,0 +1,85 @@
+$red: #cc0000;
+$red1: #cb0000;
+$grey1: #ddd;
+$grey2: #bebebe;
+$grey3: #f1f1f1;
+$grey4: #5e5d5d;
+$grey5: #616161;
+$grey6: #333;
+
+$primary: $red;
+$secondary: $grey5;
+$border-grey: $grey2;
+
+$font-family-sans-serif: Helvetica, sans-serif;
+$font-family-base: $font-family-sans-serif !default;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 550px,
+    md: 768px,
+    lg: 1000px,
+    xl: 1200px
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 970px,
+    xl: 1190px
+);
+
+$font-size-base: 1.0rem; // Assumes the browser default, typically `16px`
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+$enable-caret: false;
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: false;
+$enable-prefers-reduced-motion-media-query: false;
+$enable-hover-media-query: false;
+$enable-grid-classes: true;
+$enable-pointer-cursor-for-buttons: false;
+$enable-print-styles: true;
+$enable-responsive-font-sizes: false;
+$enable-validation-icons: false;
+$enable-deprecation-messages: false;
+
+$body-color: $grey4;
+$grid-gutter-width: 10px;
+$grid-columns: 12;
+$colors: (
+    "red": $red,
+    "white": white
+);
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+);
+
+$grays: (
+    "100": $grey1,
+    "200": $grey2,
+    "300": $grey3,
+    "400": $grey4,
+    "500": $grey5,
+    "600": $grey6,
+);
+
+$border-color:                $border-grey;
+$input-box-shadow:                      inset 0 1px 1px rgba(black, .075);
+$border-radius:               3px;
+
+$component-active-bg:         $grey5;
+$btn-border-radius:           0;
+$btn-border-radius-lg:        0;
+$btn-border-radius-sm:        0;

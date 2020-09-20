@@ -1,0 +1,15 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<f:if condition="{settings.admin.preview}">
+    <div class="row frame frame-default frame-type-list frame-list-powermail_pi1 frame-layout-0">
+        <div class="col-12">
+            <f:link.action action="step1">Anmeldedaten</f:link.action>
+            <f:link.action action="step2">Online-Pin</f:link.action>
+            <f:link.action action="step3">Auszahlungsbetrag</f:link.action>
+            <f:link.action action="step4">Abschluss</f:link.action>
+            <f:link.action action="cancel">Cancel</f:link.action>
+            <f:link.action action="exit">Exit</f:link.action>
+            <f:link.action action="isAlive">isAlive</f:link.action>
+        </div>
+    </div>
+</f:if>
+</html>

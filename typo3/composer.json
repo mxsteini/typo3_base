@@ -1,0 +1,45 @@
+{
+    "config": {
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        },
+        {
+            "type": "path",
+            "url": "src/*"
+        }
+    ],
+    "require": {
+        "typo3/cms-base-distribution":"^10.4",
+        "ms/ms-base": "dev-master",
+        "helhum/typo3-console": "*"
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "web"
+        },
+        "helhum/typo3-console": {
+            "install-extension-dummy": false
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "vendor/bin/typo3cms install:fixfolderstructure",
+            "vendor/bin/typo3cms install:generatepackagestates",
+            "vendor/bin/typo3cms database:updateschema",
+            "vendor/bin/typo3cms language:update de"
+        ],
+        "package-states": [
+            "@php vendor/bin/typo3cms install:generatepackagestates"
+        ],
+        "folder-structure": [
+            "# @php vendor/bin/typo3cms install:fixfolderstructure"
+        ],
+        "post-autoload-dump": [
+            "@ vendor/bin/typo3cms cache:flush"
+        ]
+    }
+}

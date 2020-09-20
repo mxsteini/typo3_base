@@ -1,0 +1,71 @@
+# Setup config
+#
+# Konfiguration
+#
+# @author Chris Müller <mueller@cyperfection.de>
+# @version $Id: config.ts 163 2011-12-29 12:49:15Z christian $
+# @package badenia
+
+
+config {
+	# Admin-Panel erlauben
+	admPanel = 1
+
+	# Keine Typo3-Kommentare
+	disablePrefixComment = 1
+
+	# HTML5
+	doctype = html5
+
+	# HTML-Tag selbst setzen: no-js wird später von Modernizr überschrieben
+	htmlTag_setParams = lang="{$website.language}" class="no-js"
+
+	# Kein XML-Header
+	xmlprologue = none
+
+	# Sauberes XHTML
+	xhtml_cleaning = all
+
+	# Kein "border" bei Bildern
+	disableImgBorderAttr = 1
+
+	# Standard-Javascript entfernen
+	removeDefaultJS = external
+
+	# Target fuer externe Links
+	extTarget = _blank
+
+	# Um Mitternacht den Cache leeren
+	cache_clearAtMidnight = true
+
+	# Cache-Header für Browser-Caching setzen
+	sendCacheHeaders = 1
+
+	# Anker ergänzen
+	prefixLocalAnchors = all
+
+	# Absoluten Präfix setzen
+	# Damit ist es nicht mehr notwendig, die baseURL zu definieren!
+	absRefPrefix = /
+
+	# Real-Url
+
+	compressCss	= 0
+	compressJs	= 0
+	concatenateCss = 0
+	concatenateJs = 0
+
+	# Links zwischen Domains erlauben
+	typolinkEnableLinksAcrossDomains = 1
+
+	# Spracheinstellungen
+	language = {$website.language}
+	htmlTag_langKey = {$website.language}
+	locale_all = {$website.locale}
+
+	# Header "Content-length" senden
+	enableContentLengthHeader = 1
+
+	#spamProtectEmailAddresses = 2
+    #spamProtectEmailAddresses_atSubst = (at)
+}

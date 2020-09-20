@@ -1,0 +1,19 @@
+main.container > .placement {
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.jumbotron-fluid.slider {
+    margin-bottom: 30px;
+}
+
+.glide-controls {
+    margin-top: 43.75%;
+}
+
+@include media-breakpoint-up(md) {
+    main.container > .placement {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+}

@@ -1,0 +1,6 @@
+# import extensions
+@import 'EXT:ms_base/Configuration/TypoScript/Setup/Extensions/*.typoscript'
+
+
+# Websitespezifische Konstanten
+@import 'EXT:cyz_bain/Configuration/TypoScript/Constants/Website.typoscript'

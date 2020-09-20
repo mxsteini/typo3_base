@@ -1,0 +1,38 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<footer class="footer d-print-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-7 meta-nav-wrapper">
+                <nav class="navbar DOM-slider-hidden container">
+                    <div class="navbar-footer ">
+                        <ul class="nav navbar-nav row">
+                            <f:for as="item" each="{menuMeta}">
+                                <li class="col-6 col-lg-auto">
+                                    <a href="{item.link}" title="{item.title}"> {item.title}</a>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="footer-control d-lg-none">
+                    <button class="btn btn-outline-primary meta-nav-open">Footer öffnen</button>
+                    <button class="btn btn-outline-primary meta-nav-close">Footer schließen</button>
+                </div>
+                <a id="bottomNavbarFooter"></a>
+            </div>
+            <div class="col-12 col-lg-5 brand-wrapper">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <a class="no-svg" data-wt="cen.footer.undefined" href="http://www.generali.de/" title="Generali Deutschland">
+                            <f:image alt="" src="/typo3conf/ext/cyz_bain/Resources/Public/Images/generali-logo-small.svg" title="logo"/>
+                        </a></div>
+                    <div class="copyright"><p>Ein Unternehmen der Generali Gruppe</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="accesskeys-shortcuts-container">
+        <a accesskey="P" href="javascript:window.print();" title="shortcut to print page"></a>
+    </aside>
+</footer>
+</html>

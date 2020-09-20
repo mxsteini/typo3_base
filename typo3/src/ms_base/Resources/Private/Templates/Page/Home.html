@@ -1,0 +1,22 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<f:layout name="defaultLayout"/>
+<f:section name="mainContainer">
+    <div class="page-wrapper">
+
+        <f:render arguments="{_all}" partial="Page/CookieConsent"/>
+        <f:render arguments="{_all}" partial="Page/MenuBreadcrumb"/>
+        <f:render arguments="{_all}" partial="Page/Slider"/>
+
+        <!--TYPO3SEARCH_begin-->
+        <f:if condition="{content_0}">
+            <main class="container">
+                <div class="placement">
+                    <f:format.raw>{content_0}</f:format.raw>
+                </div>
+            </main>
+        </f:if>
+        <!--TYPO3SEARCH_end-->
+        <div class="slideout-shield"></div>
+    </div>
+</f:section>
+</html>

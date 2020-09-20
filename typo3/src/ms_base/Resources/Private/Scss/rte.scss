@@ -1,0 +1,59 @@
+@import "bootstrapRte";
+@import "allModules/above/icons";
+@import "Content/above/table";
+h1, h2 {
+    font-weight: $font-medium;
+    font-size: 30px;
+    line-height: 1.4;
+    color: $red;
+    margin: 0;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+h2 {
+    font-weight: $font-light;
+    margin: 40px 0 20px 0;
+    color: $grey6;
+
+    &:after {
+        display: none;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    color: $red;
+    padding-top: 24px;
+}
+
+ul {
+    padding: 0;
+    margin-bottom: 0 0 20px 0;
+}
+
+li {
+    padding: 0;
+    margin-left: 20px;
+    position: relative;
+    list-style-type: none;
+
+    &:before {
+        position: absolute;
+        color: $red;
+        font-size: 23px;
+        line-height: 1;
+        content: "•";
+        left: -17px;
+        top: 1px;
+    }
+}
+body {
+    margin: 20px;
+    max-width: 980px;
+}
+
+.btn-outline-light {
+    background: $grey5;
+}
+

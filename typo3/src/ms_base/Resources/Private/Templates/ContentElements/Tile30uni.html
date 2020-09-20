@@ -1,0 +1,19 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<div class="tile tile30uni {data.frame_class} col-12 col-md-4">
+    <div class="content">
+        <f:if condition="{data.header}">
+            <h3>{data.header}</h3>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <div class="bodytext">
+                <f:format.raw>{data.bodytext}</f:format.raw>
+            </div>
+        </f:if>
+        <div class="button-wrapper">
+            <f:if condition="{data.tx_cyzbain_linktarget}">
+                <f:link.typolink class="btn btn-lg icon-more icon-after btn-outline-primary" parameter="{data.tx_cyzbain_linktarget}">{data.tx_cyzbain_linktext}</f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+</div>
+</html>

@@ -1,0 +1,41 @@
+#cookie-consent {
+    padding: 0;
+    background: $red;
+    color: $grey3;
+    padding: 0 $grid-gutter-width / 2;
+    line-height: 1.4375;
+    .container {
+        width: 100% !important;
+        max-width: map_get($container-max-widths, 'xl');
+    }
+    .content-wrapper {
+        position: relative;
+        padding: 30px 60px 30px 20px;
+        button {
+            opacity: .9;
+            cursor: pointer;
+            background: 0 0;
+            border: 0;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: #fff;
+            text-shadow: none;
+            font-size: 30px;
+            line-height: 1;
+            padding: 5px 10px;
+        }
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    .close span {
+        position: relative;
+        top: -3px;
+    }
+    a {
+        font-weight: $font-bold;
+        text-decoration: none;
+        color: $grey3;
+    }
+}

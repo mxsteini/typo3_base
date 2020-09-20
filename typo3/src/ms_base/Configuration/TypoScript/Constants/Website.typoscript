@@ -1,0 +1,30 @@
+# Website-Konstanten
+#
+# Definition der websitespezifischen Konstanten von Badenia
+#
+# @author Chris Müller <mueller@cyperfection.de>
+# @version $Id: badenia.ts 249 2013-02-25 09:40:51Z christian $
+# @package badenia
+
+
+website {
+	language = de
+	locale = de_DE.utf8
+
+	pages {
+		home =
+	}
+
+	### Navigation ###
+	nav {
+		main = 
+		footer = 
+        meta = 
+		top  = 
+	}
+
+
+    folder {
+    }
+
+}

@@ -1,0 +1,31 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<div class="tile tile50icon {data.frame_class} col-12 col-md-6">
+    <div class="content">
+        <f:if condition="{data.header}">
+            <h3 class="d-md-none">{data.header}</h3>
+        </f:if>
+        <f:if condition="{data_image}">
+            <div class="image">
+                <picture>
+                    <img alt="{alt}" class=""
+                         src="{f:uri.image(image: '{data_image.0}', width: '100', height: '100', cropVariant: 'default')}"
+                         title="{data_image.0.title}"/>
+                </picture>
+            </div>
+        </f:if>
+        <f:if condition="{data.header}">
+            <h3 class="d-none d-md-block">{data.header}</h3>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <div class="bodytext">
+                <f:format.raw>{data.bodytext}</f:format.raw>
+            </div>
+        </f:if>
+        <div class="button-wrapper">
+            <f:if condition="{data.tx_cyzbain_linktarget}">
+                <f:link.typolink class="btn btn-lg icon-more icon-after btn-outline-primary" parameter="{data.tx_cyzbain_linktarget}">{data.tx_cyzbain_linktext}</f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+</div>
+</html>

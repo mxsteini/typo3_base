@@ -1,0 +1,98 @@
+/config/project.config.local.sh
+/config/project.config.sh
+/.vagrant/
+/vendor/
+/config/vhost.local.conf
+/typo3/typo3conf/ENABLE_INSTALL_TOOL
+/config/htpasswd
+Vagrantfile.local.rb
+/*.tgz
+
+/tmp/
+/db/
+/typo3/.sass-cache/
+/.sass-cache/
+
+#**/Resources/Public/*
+#!**/Resources/Public/External/
+.idea*
+
+.editorconfig
+
+## Typo3
+# Ignore serveral upload and file directories.
+/typo3/fileadmin/
+/typo3/uploads/
+# Deprecation-Log
+#/typo3/typo3conf/deprecation*
+# Ignore cache
+/typo3/typo3conf/_processed_
+# Ignore temp directory.
+/typo3/typo3temp/
+# Enable Install Tool
+/typo3/typo3conf/ENABLE_INSTALL_TOOL
+/typo3/typo3conf/realurl_autoconf.php
+/typo3/typo3conf/user_upload
+/typo3/typo3conf/ext.remove
+#/typo3/typo3conf/ext/*
+#!/typo3/typo3conf/ext/cyz*
+
+
+#/typo3/typo3conf/_processed_
+
+#temp
+/typo3/clear.gif
+/typo3/*.txt
+/typo3/Configuration/_temp_/
+/typo3/Configuration/_processed_/
+/typo3/Configuration/user_upload/
+/typo3/Resources/_temp_/
+/typo3/Resources/_processed_/
+/typo3/typo3conf/ENABLE_INSTALL_TOOL
+/typo3/typo3conf/l10n/
+!/typo3/typo3conf/l10n/index.html
+/typo3/typo3conf/*.log
+/typo3/typo3temp/
+!/typo3/typo3temp/index.html
+/typo3/typo3conf/ext/extension_builder/
+temp_*
+typo3/var
+/logs/
+/typo3/typo3conf/localconf.php
+/typo3/typo3conf/realurl_conf.php
+/typo3/typo3conf/LocalConfiguration.beforePackageStatesMigration.php
+/typo3/typo3conf/localconf.obsolete.php
+/typo3/typo3conf/ext/cyz_bain/Resources/Public/
+/typo3/typo3conf/ext/cyz_bain/Resources/Public.old/
+
+
+/.project
+
+# ignore everything
+/typo3/vendor/
+**/Public/*
+**/tmp/*
+
+# exclude from excluding
+!/typo3/web/
+/typo3/web/*
+!/typo3/web/robots.txt
+!/typo3/web/favicon.ico
+!/typo3/web/typo3conf/
+/typo3/web/typo3conf/*
+!/typo3/web/typo3conf/AdditionalConfiguration.php
+!/typo3/web/typo3conf/ContextConfiguration/
+/typo3/web/typo3conf/ContextConfiguration/*
+!/typo3/web/typo3conf/ContextConfiguration/AdditionalConfiguration_development.php
+
+# ignore all extension excluded the cyz*
+# add patched extension with "git add -f"
+/typo3/web/typo3conf/ext/*
+
+packagehash.txt
+
+# Gulp
+**node_modules
+*.map
+!domain.map
+config-local.json

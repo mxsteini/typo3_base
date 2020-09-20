@@ -1,0 +1,44 @@
+<!-- vim: set ft=fluid :-->
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<nav class="d-lg-none slideout-menu slideout-menu-left" data-mobile-menu="" id="menu">
+    <div class="search-row">
+        <f:form action="search" class="quicksearch search-form" controller="Search" extensionName="indexedsearch" method="post" pageUid="{targetPid}" pluginName="pi2">
+            <label for="quicksearch-sword" class="d-none">Suche:</label>
+            <f:form.textfield class="search-field quicksearch-sword" id="query" name="search[sword]" value="{sword}"/>
+            <button class="btn btn-search" type="submit" title="suchen"><span>Suchen</span></button>
+        </f:form>
+    </div>
+    <ul class="level1">
+        <f:for as="level1" each="{menuMain}">
+            <li class="{f:if(condition: '{level1.active}', then: 'active')} {f:if(condition: '{level1.current}', then: 'current')}">
+                <a href="{level1.link}" title="{level1.title}"> <span>{level1.title}</span></a>
+                <f:if condition="{level1.children}">
+                    <ul class="level2 {f:if(condition: '{level1.active} == 0 ', then: ' DOM-slider-hidden')}">
+                        <f:for as="level2" each="{level1.children}">
+                            <f:if condition="!{level2.spacer}">
+                                <li class="{f:if(condition: '{level2.active}', then: 'active')} {f:if(condition: '{level2.current}', then: 'current')}">
+                                    <a href="{level2.link}" title="{level2.title}"> <span>{level2.title}</span></a>
+                                    <f:if condition="{level2.children}">
+                                        <ul class="level3 {f:if(condition: '{level2.active} == 0 ', then: ' DOM-slider-hidden')}">
+                                            <f:for as="level3" each="{level2.children}">
+                                                <li class="{f:if(condition: '{level3.active}', then: 'active')} {f:if(condition: '{level3.current}', then: 'current')}">
+                                                    <f:if condition="{level3.children}">
+                                                        <a class="caret level3" title="open submenu"></a>
+                                                    </f:if>
+                                                    <a href="{level3.link}" title="{level3.title}"> <span>{level3.title}</span></a>
+                                                </li>
+                                            </f:for>
+                                        </ul>
+                                        <a class="caret level2" title="open submenu"></a>
+                                    </f:if>
+                                </li>
+                            </f:if>
+                        </f:for>
+                    </ul>
+                    <a class="caret level1" title="open submenu"></a>
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</nav>
+</html>

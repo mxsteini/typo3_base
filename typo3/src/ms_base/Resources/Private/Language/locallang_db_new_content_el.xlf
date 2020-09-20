@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="" product-name="cyz_cyt3">
+        <body>
+            <trans-unit id="wizards.newContentElement.cyz_slider_title" xml:space="preserve">
+                <source>Slider</source>
+            </trans-unit>
+            <trans-unit id="wizards.newContentElement.cyz_slider_description" xml:space="preserve">
+                <source>Großer Slider</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

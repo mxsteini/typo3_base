@@ -1,0 +1,16 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<f:layout name="Default"/>
+<f:section name="Main">
+    <f:if condition="{menu.0.content}">
+        <ul>
+            <f:for as="element" each="{menu.0.content}">
+                <li>
+                    <a href="{menu.0.link}#c{element.data.uid}" menu.0.target, then: {f:if(condition: ' target="{menu.0.target}"')} title="{element.data.header}">
+                    <span>{element.data.header}</span>
+                    </a>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>
+</html>

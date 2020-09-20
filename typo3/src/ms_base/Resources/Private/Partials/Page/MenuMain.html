@@ -1,0 +1,74 @@
+<!-- vim: set ft=fluid :-->
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+    <header class="header">
+        <div class="header-desktop d-none d-lg-flex">
+            <div class="container">
+                <a class="no-svg" data-wt="cen.header.undefined" href="/" title="Central Krankenversicherung">
+                    <f:image src="EXT:cyz_bain/Resources/Public/Images/Badenia_logo.svg" width="200" title="logo"></f:image>
+                </a>
+
+                <div class="navigation-wrapper">
+                    {quicksearch->f:format.raw()}
+                    <nav>
+                        <ul class="main-navigation">
+                            <f:for each="{menuMain}" as="level1">
+                                <li {f:if(condition: '{level1.current}', then: 'class="current"')}><a href="{level1.link}"><span>{level1.title}</span></a>
+                                    <div class="sub-navigation">
+                                        <div class="container">
+                                            <ul><f:for each="{level1.children}" as="level2">
+                                                    <f:if condition="{level2.spacer}">
+                                                        <f:then>
+                                                        </ul><ul>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <li><a href="{level2.link}"><span>{level2.title}</span></a>
+                                                            <ul>
+                                                                <f:for each="{level2.children}" as="level3">
+                                                                    <li><a href="{level3.link}"><span>{level3.title}</span></a></li>
+                                                                </f:for>
+                                                            </ul></li>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:for>
+                                            </ul>
+                                            <f:if condition="{level1.data.teaser_heading} && {level1.data.teaser_link} && {level1.data.teaser_link_text}">
+                                                <f:then>
+                                                        <div class="navigation-teaser">
+                                                            <f:if condition="{level1.data.teaser_image}">
+                                                                <f:image image="{level1.data_image.0}" />
+                                                            </f:if>
+                                                            <span class="teaser-heading">{level1.data.teaser_heading}</span>
+                                                            <f:link.typolink class="btn btn-lg icon-more icon-after btn-outline-light" parameter="{level1.data.teaser_link}">
+                                                                {level1.data.teaser_link_text}
+                                                            </f:link.typolink>
+                                                        </div>
+                                                </f:then>
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                </li>
+                            </f:for>
+                            <li></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header-mobile d-lg-none">
+            <div class="col-2">
+                <div class="menu-wrapper">
+                    <a class="icon-menu" data-mobilelink-menu="" href="#" title="öffne Navigation"></a>
+                </div>
+            </div>
+            <div class="col-8 brand-wrapper">
+                <div class="brand navbar-brand">
+                    <a class="no-svg" data-wt="cen.header.undefined" href="/" title="Central Krankenversicherung">
+                        <f:image src="EXT:cyz_bain/Resources/Public/Images/Badenia_logo.svg" width="200" title="logo"></f:image>
+                    </a></div>
+            </div>
+            <div class="col-2"><a class="agencybanner-image-toggler" title="Berater suchen" alt="Berater suchen">
+                <em class="default-agency-image"><span></span></em>
+            </a></div>
+        </div>
+    </header>
+</html>

@@ -1,0 +1,10 @@
+# import extensions
+@import 'EXT:ms_base/Configuration/TypoScript/Setup/Extensions/*.typoscript'
+
+# Template
+@import 'EXT:ms_base/Configuration/TypoScript/Setup/Lib/*.typoscript'
+
+# Einstellungen
+@import 'EXT:ms_base/Configuration/TypoScript/Setup/Config.typoscript'
+@import 'EXT:ms_base/Configuration/TypoScript/Setup/Page.typoscript'
+

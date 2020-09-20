@@ -1,0 +1,25 @@
+{
+  "name": "ms/ms-base",
+  "type": "typo3-cms-extension",
+  "description": "base extension with webpack",
+  "keywords": ["typo3"],
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Michael Stein, IT beratung",
+      "email": "info@michaelstein-itb.de"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "replace": {
+    "ms_base": "self.version",
+    "typo3-ter/ms_base": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ms\\MsBase\\": "Classes"
+    }
+  }
+}

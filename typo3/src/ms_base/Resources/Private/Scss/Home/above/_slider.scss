@@ -1,0 +1,236 @@
+.jumbotron-fluid .slider {
+    background: white;
+
+    .swiper-slide {
+        position: relative;
+        visibility: hidden;
+
+        &:first-child {
+            display: block;
+            visibility: visible;
+        }
+
+
+        img {
+            //object-fit: contain;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+        }
+
+        img.loaded {
+            opacity: 1;
+        }
+
+    }
+
+    div.content {
+        padding: 20px 2.5%;
+        text-align: center;
+        font-weight: $font-light;
+    }
+
+    h2 {
+        position: relative;
+        font-size: 32px;
+        font-weight: $font-light;
+        line-height: 1.25;
+        padding-bottom: .5rem;
+        word-wrap: break-word;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    div.bodytext {
+        font-weight: $font-medium;
+        position: relative;
+        font-size: 18px;
+        line-height: 1.66667;
+        padding: 15px 0 20px 0;
+
+        &:before {
+            position: absolute;
+            left: 29%;
+            top: 0;
+            content: " ";
+            width: 42%;
+            height: 1px;
+            border-bottom: 1px solid $red;
+        }
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    .btn-outline-light,
+    .btn-outline-primary {
+        margin-top: 20px;
+        color: $red;
+        border-color: $red;
+        &:hover {
+            color: white;
+            background: $red;
+        }
+    }
+
+    &.after-build .slide {
+        display: block;
+        visibility: visible;
+
+        div.content h2 {
+            opacity: 1;
+        }
+    }
+
+    .glide-controls {
+        position: absolute;
+        margin-top: 43.75%;
+        top: 0;
+        bottom: auto;
+        width: 100%;
+
+        > a.caret {
+            margin-top: -50px;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+            position: absolute;
+            background: $red;
+            color: $white;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+
+            &:after {
+                display: none;
+            }
+            &:before {
+                transform: rotate(0);
+            }
+            &:hover {
+                background: $white;
+                &:before {
+                    color: $red;
+                }
+            }
+        }
+        a.caret-left:before {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &.after-build {
+        .glide-controls a {
+            opacity: .7;
+        }
+    }
+
+    .glide__arrow--left {
+        right: 0;
+    }
+
+    .glide__arrow--right {
+        left: 0;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .jumbotron-fluid .slider {
+        background: $grey3;
+        .mask {
+            position: absolute;
+            background: black;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        padding-top: 43.75%;
+        position: relative;
+
+        .glide__track {
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .glide-controls {
+            top: 50%;
+            margin-top: -25px;
+            padding: 0;
+
+            > a.caret {
+                margin-top: 0;
+            }
+        }
+
+        div.content {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 25%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+
+            h2 {
+                opacity: 0;
+                transition: 1s;
+            }
+        }
+
+        div.bodytext {
+            padding-top: 15px;
+        }
+
+        .btn-outline-light,
+        .btn-outline-primary {
+            color: white;
+            border-color: white;
+            &:hover {
+                color: $red;
+                background: white;
+                border-color: $red;
+            }
+        }
+
+        h2 {
+            font-size: 34px;
+            line-height: 1.17647;
+            padding-bottom: 14px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .jumbotron-fluid .slider {
+        h2 {
+            font-size: 50px;
+            line-height: 53px;
+            padding-bottom: 25px;
+        }
+
+        div.bodytext {
+            padding-top: 25px;
+            font-size: 20px;
+        }
+
+        .btn-lg {
+            padding: 15px 12px;
+            padding-right: 30px;
+            font-size: 18px;
+            line-height: 1.38889;
+
+            &:after {
+                padding: 20px 5px 8px;
+            }
+        }
+    }
+}

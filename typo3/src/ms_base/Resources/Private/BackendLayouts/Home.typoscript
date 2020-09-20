@@ -1,0 +1,35 @@
+backend_layout {
+    colCount = 1
+    rowCount = 2
+    rows {
+        1 {
+            columns {
+                1 {
+                    name = Header
+                    colPos = 5
+                    allowed {
+                        CType = *
+                        list_type = *
+                    }
+                    disallowed {
+                        CType = *
+                        list_type = *
+                    }
+                }
+            }
+        }
+        2 {
+            columns {
+                1 {
+                    name = Hauptinhalte
+                    colPos = 0
+                    allowed {
+                        # no space in CSV!
+                        CType = *
+#                        tx_gridelements_backend_layout = 50
+                    }
+                }
+            }
+        }
+    }
+}

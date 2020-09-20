@@ -1,0 +1,18 @@
+div[data-tx_gridelements_backend_layout="50"] + span.exampleContent {
+    div[data-colpos="100"] {
+        display: flex;
+        flex-flow: wrap;
+
+        div {
+            width: 100%;
+        }
+
+        div[data-ctype^="cyz_tile_30"] {
+            width: 29% !important;
+        }
+
+        div[data-ctype^="cyz_tile_50"] {
+            width: 47% !important;
+        }
+    }
+}

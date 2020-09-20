@@ -1,0 +1,30 @@
+<!-- vim: set ft=fluid :-->
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<f:if condition="{data.uid} != 4 && {data.uid} != 22">
+    <div class="jumbotron breadcrumb-wrapper">
+        <div class="container">
+            <nav class="nav-bar">
+                <ol class="breadcrumb d-none d-md-block">
+                    <f:for as="item" each="{menuBreadcrumb}" iteration="iterator">
+                        <f:if condition="{iterator.isLast}">
+                            <f:then>
+                                <li class="active">
+                                    {item.title}
+                                </li>
+                            </f:then>
+                            <f:else>
+                                <li>
+                                    <a href="{item.link}" title="{item.title}">{item.title}</a>
+                                </li>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </ol>
+            </nav>
+            <div class="pagetools">
+                <div class="icon-print" data-printpage="" onClick="javascript:window.print()"><span>Drucken</span></div>
+            </div>
+        </div>
+    </div>
+</f:if>
+</html>
