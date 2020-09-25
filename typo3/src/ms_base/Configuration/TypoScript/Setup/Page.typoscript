@@ -34,41 +34,41 @@ page {
         partialRootPath = EXT:ms_base/Resources/Private/Partials/
 
         dataProcessing {
-#            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-#            10 {
-#                special = directory
-#                special.value = {$website.nav.main}
-#                levels = 3
-#                as = menuMain
-#                expandAll = 1
-#                titleField = nav_title // title
-#                includeSpacer = 1
-#
-#                dataProcessing {
-#                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-#                    10 {
-#                        if.isTrue.field = teaser_image
-#
-#                        references {
-#                            fieldName = teaser_image
-#                            table = pages
-#                        }
-#
-#                        as = data_image
-#                    }
-#                }
-#            }
-#
-#            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-#            20 {
-#                special = directory
-#                special.value = {$website.nav.meta}
-#                levels = 3
-#                as = menuMeta
-#                expandAll = 1
-#                titleField = nav_title // title
-#            }
-#
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                special = directory
+                special.value = {$website.nav.main}
+                levels = 3
+                as = navigationMain
+                expandAll = 1
+                titleField = nav_title // title
+                includeSpacer = 1
+
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        if.isTrue.field = teaser_image
+
+                        references {
+                            fieldName = teaser_image
+                            table = pages
+                        }
+
+                        as = data_image
+                    }
+                }
+            }
+
+            // 20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            // 20 {
+            //     special = directory
+            //     special.value = {$website.nav.meta}
+            //     levels = 3
+            //     as = menuMeta
+            //     expandAll = 1
+            //     titleField = nav_title // title
+            // }
+
 #            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
 #            50 {
 #                special = rootline

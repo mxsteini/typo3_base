@@ -6,7 +6,7 @@ website {
 	locale = de_DE.utf8
 
 	pages {
-		home =
+		home = 1
 	}
 
 	### Navigation ###

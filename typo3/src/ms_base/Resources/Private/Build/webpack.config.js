@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 require('babel-loader')
 const config = require('./config')
-// const workboxPlugin = require('workbox-webpack-plugin')
 const merge = require('webpack-merge')
 const CopyPlugin = require('copy-webpack-plugin')
 require('@babel/core').transform('code', {
@@ -11,10 +10,6 @@ require('@babel/preset-env')
 require('@babel/polyfill')
 require('core-js/stable')
 
-
-// path.join(rootPath, 'resources/assets'),
-
-// process.cwd(config.paths.root)
 let webpackConfig = {
     context: config.paths.assets,
     mode: config.mode,
@@ -46,6 +41,7 @@ let webpackConfig = {
         watchContentBase: true,
         liveReload: true,
         publicPath: config.devUrl + config.paths.publicPath,
+        port: 9000,
         proxy: {
             '/': {
                 context: () => true,
@@ -135,36 +131,16 @@ let webpackConfig = {
 
     },
     plugins: [
-        // new webpack.ProvidePlugin({
-        //   $: 'jquery',
-        //   jQuery: 'jquery',
-        //   'window.jQuery': 'jquery'
-        // }),
         new CopyPlugin([
             { from: '../Private/Assets/Images', to: 'Images' },
             { from: '../Private/Assets/JavaScripts', to: 'JavaScripts' },
             { from: '../Private/Fonts/', to: 'Fonts' }
         ]),
         new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
             filename: 'StyleSheets/[name].css',
             publicPath: config.paths.dist,
             chunkFilename: '[id].css'
-        }),
-        // new workboxPlugin.GenerateSW({
-        //   swDest: '../../../../web/sw.js',
-        //   precacheManifestFilename: 'JavaScripts/precache-manifest.[manifestHash].js',
-        //   clientsClaim: true,
-        //   skipWaiting: true,
-        //   exclude: [/\.map$/, /.*manifest.*\.js$/],
-        //   runtimeCaching: [{
-        //     // Match any same-origin request that contains 'api'.
-        //     urlPattern: /.*/,
-        //     // Apply a network-first strategy.
-        //     handler: 'NetworkFirst'
-        //   }]
-        // })
+        })
     ]
 }
 

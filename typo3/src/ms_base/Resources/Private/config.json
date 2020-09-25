@@ -1,5 +1,4 @@
 {
-    "devUrl": "https://bain.localhost/",
     "cacheBusting": "[name]_[hash:8]",
     "watch": [
         "Configuration/**/*.typoscript",
