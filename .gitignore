@@ -8,6 +8,7 @@
 #**/Resources/Public/*
 #!**/Resources/Public/External/
 .idea*
+.vscode*
 
 ## Typo3
 /typo3/web/fileadmin/
