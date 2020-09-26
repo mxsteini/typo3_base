@@ -1,24 +1,24 @@
 // @import "~bootstrap/scss/bootstrap";
 
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+// @import "~bootstrap/scss/root";
+// @import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
 //  @import "~bootstrap/scss/code";
-@import "~bootstrap/scss/grid"; // 15kb
+// @import "~bootstrap/scss/grid"; // 15kb
 //  @import "~bootstrap/scss/tables"; // 5kb
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/transitions";
-@import "~bootstrap/scss/dropdown";
-@import "~bootstrap/scss/button-group";
+// @import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/buttons";
+// @import "~bootstrap/scss/transitions";
+// @import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
 //  @import "~bootstrap/scss/input-group";
 //  @import "~bootstrap/scss/custom-forms";
-@import "~bootstrap/scss/nav";
-@import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/nav";
+// @import "~bootstrap/scss/navbar";
 //  @import "~bootstrap/scss/card";
 //  @import "~bootstrap/scss/breadcrumb";
 //  @import "~bootstrap/scss/pagination";
@@ -33,27 +33,27 @@
 //  @import "~bootstrap/scss/modal";
 //  @import "~bootstrap/scss/tooltip";
 //  @import "~bootstrap/scss/popover";
-// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/carousel"; // 4kb
 //  @import "~bootstrap/scss/spinners";
 
 //  @import "~bootstrap/scss/utilities";
-// @import "~bootstrap/scss/utilities/align";
-// @import "~bootstrap/scss/utilities/background"; // 1kb
+@import "~bootstrap/scss/utilities/align";
+@import "~bootstrap/scss/utilities/background"; // 1kb
 // @import "~bootstrap/scss/utilities/borders"; // 2kb
-// @import "~bootstrap/scss/utilities/clearfix";
-// @import "~bootstrap/scss/utilities/display"; // 3kb
+@import "~bootstrap/scss/utilities/clearfix";
+@import "~bootstrap/scss/utilities/display"; // 3kb
 // @import "~bootstrap/scss/utilities/embed";
-// @import "~bootstrap/scss/utilities/flex"; // 20kb
-// @import "~bootstrap/scss/utilities/float";
+@import "~bootstrap/scss/utilities/flex"; // 20kb
+// @import "~bootstrap/scss/utilities/float"; // 1kb
 // @import "~bootstrap/scss/utilities/interactions";
 // @import "~bootstrap/scss/utilities/overflow";
-// @import "~bootstrap/scss/utilities/position"; // 1kb
+@import "~bootstrap/scss/utilities/position"; // 1kb
 // @import "~bootstrap/scss/utilities/screenreaders";
 // @import "~bootstrap/scss/utilities/shadows";
-// @import "~bootstrap/scss/utilities/sizing";
-// @import "~bootstrap/scss/utilities/spacing"; // 20kb
+@import "~bootstrap/scss/utilities/sizing";
+@import "~bootstrap/scss/utilities/spacing"; // 20kb
 // @import "~bootstrap/scss/utilities/stretched-link";
 // @import "~bootstrap/scss/utilities/text";
-// @import "~bootstrap/scss/utilities/visibility";
+@import "~bootstrap/scss/utilities/visibility";
 
 // @import "~bootstrap/scss/print";

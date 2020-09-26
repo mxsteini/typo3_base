@@ -1,20 +1,17 @@
-@import "bootstrapRte";
-@import "_All/above/icons";
-@import "Content/above/table";
+// @import "bootstrapRte";
+// @import "_All/above/icons";
+// @import "Content/above/table";
+
 h1, h2 {
-    font-weight: $font-medium;
     font-size: 30px;
     line-height: 1.4;
-    color: $red;
     margin: 0;
     word-wrap: break-word;
     text-align: left;
 }
 
 h2 {
-    font-weight: $font-light;
     margin: 40px 0 20px 0;
-    color: $grey6;
 
     &:after {
         display: none;
@@ -23,7 +20,6 @@ h2 {
 
 h3 {
     font-size: 24px;
-    color: $red;
     padding-top: 24px;
 }
 
@@ -40,7 +36,6 @@ li {
 
     &:before {
         position: absolute;
-        color: $red;
         font-size: 23px;
         line-height: 1;
         content: "•";
@@ -54,6 +49,5 @@ body {
 }
 
 .btn-outline-light {
-    background: $grey5;
 }
 

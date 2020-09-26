@@ -1,11 +1,14 @@
 import { addBackToTop } from 'vanilla-back-to-top'
 // import Cookies from 'js-cookie'
-import LazyLoad from 'vanilla-lazyload'
+// import LazyLoad from 'vanilla-lazyload'
 // import '../../Helper/jsLoaderController'
 // import EventController from '../../Helper/eventController'
-import $ from 'jquery/dist/jquery';
+
 // import $ from 'bootstrap.native'
+import $ from 'jquery/dist/jquery';
 import 'bootstrap/dist/js/bootstrap.bundle'
+
+
 // var $ = require( "jquery" );
 // export for others scripts to use
 // window.$ = $;

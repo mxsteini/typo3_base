@@ -37,7 +37,7 @@ page {
             10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             10 {
                 special = directory
-                special.value = {$website.nav.main}
+                special.value = {$website.pages.home}
                 levels = 3
                 as = navigationMain
                 expandAll = 1
@@ -79,6 +79,11 @@ page {
         }
 
         variables {
+            home = TEXT
+            home {
+                typolink.parameter = {$website.pages.home}
+                value = ms_base
+            }
             content_0 < styles.content.get
 
             # get content, left
